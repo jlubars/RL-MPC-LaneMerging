@@ -1,0 +1,6 @@
+<routes>
+    <vType accel="4.5" decel="6.0" id="egoCar" length="5.0" minGap="2.5" maxSpeed="40.0" sigma="0.0" color="0,1,0"/>
+    <vType id="normal" color="white" accel="4.5" decel="6.0" length="5.0" minGap="1" maxSpeed="7" sigma="0.0" tau="0.5" carFollowModel="Krauss" departSpeed="10" speedFactor="1.0" speedDev="0.0"/>
+    <route id="rampRoute" edges="ramp highwayahead"/>
+    <route id="highwayRoute" edges="highwayrear highwayahead"/>
+</routes>

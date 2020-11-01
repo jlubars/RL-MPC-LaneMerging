@@ -1,0 +1,12 @@
+cython
+numpy
+scipy
+matplotlib
+cvxopt
+tensorflow
+torch
+torchvision
+tqdm
+gym
+autonomous-learning-library==0.5.3
+pandas

@@ -1,0 +1,30 @@
+<configuration>
+
+    <input>
+        <net-file value="merge.net.xml"/>
+        <route-files value="merge.rou.xml"/>
+        <gui-settings-file value="settings.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <end value="100000000"/>
+        <step-length value="0.2"/>
+    </time>
+    <report>
+        <verbose value="false"/>
+        <no-warnings value="true"/>
+        <no-step-log value="true"/>
+        <error-log value="sumo_errors.log"/>
+    </report>
+    <processing>
+        <step-method.ballistic value="false"/>
+        <lateral-resolution value="0.05"/>
+        <collision.action value="remove"/>
+        <collision.check-junctions value="true"/>
+        <collision.mingap-factor value="0"/>
+    </processing>
+    <random_number>
+        <random value="false"/>
+    </random_number>
+
+</configuration>
