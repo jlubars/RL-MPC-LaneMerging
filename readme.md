@@ -27,5 +27,5 @@ python main.py configs/<settings>.json
 ```
 The results of each experiment will be appended to a file named `run_data.csv`.
 
-### Full experimental results:
-Coming soon!
+### Full experimental results from the paper:
+See the `experiment_data` folder
