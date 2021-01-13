@@ -115,5 +115,3 @@ runs/
 plots/
 models/
 
-# Settings Files
-*.json
