@@ -14,7 +14,7 @@ This repository contains the code used for the experiments in our paper of the a
 5. (If CUDA support is desired) Install PyTorch with CUDA support, following the instructions on the [PyTorch website](https://pytorch.org/).
 6. Install the other requirements with pip
     ```
-    cd MergeControl
+    cd RL-MPC-LaneMerging
     pip install -r requirements.txt
     ```
 7. Compile the Cython:
