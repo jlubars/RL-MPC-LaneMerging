@@ -55,8 +55,9 @@ class DDPGAgent(dqn.RLAgent):
         experiment.train(num_frames)
         default_log_dir = experiment._writer.log_dir
         copy_tree(default_log_dir, Settings.FULL_LOG_DIR)
-        rmtree(default_log_dir)
         rl_agent.env.close()
+        experiment._writer.close()
+        rmtree(default_log_dir)
 
     @classmethod
     def resume_training(cls, path, num_frames: int):
@@ -75,8 +76,9 @@ class DDPGAgent(dqn.RLAgent):
         experiment.train(frames=num_frames)
         default_log_dir = experiment._writer.log_dir
         copy_tree(default_log_dir, Settings.FULL_LOG_DIR)
-        rmtree(default_log_dir)
         rl_agent.env.close()
+        experiment._writer.close()
+        rmtree(default_log_dir)
 
     def get_control(self, state: prediction.HighwayState) -> float:
         vector_state = dqn.get_state_vector_from_base_state(state)

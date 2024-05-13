@@ -7,6 +7,6 @@ tensorflow
 torch
 torchvision
 tqdm
-gym
+gym==0.23.1
 autonomous-learning-library==0.5.3
 pandas

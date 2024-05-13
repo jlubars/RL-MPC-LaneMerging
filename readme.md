@@ -1,6 +1,6 @@
 # Combining  Reinforcement  Learning  with  Model  Predictive  Control  for On-Ramp  Merging
 
-This repository contains the code used for the experiments in our paper of the above name, along with some experimental results (soon!)
+This repository contains the code used for the experiments in our [paper of the above name](https://arxiv.org/pdf/2011.08484), along with some experimental results (soon!)
 
 ### Setup instructions:
 1. Install SUMO version 1.7.0 and set SUMO_HOME to point to that installation

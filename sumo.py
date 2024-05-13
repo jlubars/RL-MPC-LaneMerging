@@ -41,14 +41,19 @@ def start_sumo():
         elif Settings.TRAFFIC_DENSITY == "high":
             sumo_cmd.extend(["--route-files", "merge2c.rou.xml"])
         else:
-            raise ValueError("Unkown TRAFFIC_DENSITY: {}".format(Settings.TRAFFIC_DENSITY))
+            raise ValueError("Unknown TRAFFIC_DENSITY: {}".format(Settings.TRAFFIC_DENSITY))
     elif Settings.USE_SIMPLE_TRAFFIC_DISTRIBUTION:
         sumo_cmd.extend(["--route-files", "merge_impossible.rou.xml"])
     if Settings.SEED != "Random":
         sumo_cmd.extend(["--seed", str(Settings.SEED)])
     else:
         sumo_cmd.extend(["--random"])
-    traci.start(sumo_cmd)
+    try:
+        traci.start(sumo_cmd)
+    except FileNotFoundError as e:
+        import traceback
+        print(traceback.format_exc())
+        print("Have you installed SUMO and added the directory containing sumo or sumo.exe to your PATH?")
     if Settings.USE_SIMPLE_TRAFFIC_DISTRIBUTION:
         traci.vehicletype.setMaxSpeed("normal", Settings.OTHER_CAR_SPEED)
 

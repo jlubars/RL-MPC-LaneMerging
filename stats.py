@@ -195,6 +195,6 @@ class StatsAggregator:
         else:
             dataframe = pd.DataFrame()
         new_row = pd.DataFrame([self.get_stat_report_row_dict()])
-        combined = dataframe.append(new_row)
+        combined = pd.concat([dataframe, new_row], ignore_index=True)
         combined.to_csv("run_data.csv", index=False)
 

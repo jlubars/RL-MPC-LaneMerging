@@ -30,8 +30,8 @@ def find_s_t_obstacles_from_state(current_state, future_s=150, delta_s=0.5, delt
     # We discretize the s and t space, and store the lookup for s and t values in these arrays
     s_values = np.arange(start_s, start_s + future_s + delta_s, delta_s)
     t_values = np.arange(0, time_limit + delta_t, delta_t)
-    obstacles = np.zeros((t_values.size, s_values.size), dtype=np.bool)
-    distances = np.zeros(obstacles.shape, dtype=np.float)
+    obstacles = np.zeros((t_values.size, s_values.size), dtype=bool)
+    distances = np.zeros(obstacles.shape, dtype=float)
     distances += 1E10  # Big number but not NaN
 
     discrete_length = int(Settings.CAR_LENGTH / delta_s)
